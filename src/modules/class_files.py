@@ -2,11 +2,13 @@
 
 class Transaction:
     """Stores type (“income” or “expense”), description, and amount."""
-    def __init__(self, description, amount):
+    def __init__(self, type, description, amount):
         self.description = description
         self.amount = amount            #⬅️ Let this be a integer
-        self.income = {}
-        self.expense = {}
+        self.type = type
+
+    def transac_data(self):
+        pass
 
 
 class Budget:
