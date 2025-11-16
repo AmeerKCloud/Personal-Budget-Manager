@@ -8,7 +8,7 @@ class Transaction:
         self.amount = amount            #⬅️ Let this be a integer
 
     def transac_data(self):
-        transac_dict = {}
+        transac_dict = {"Type:"}
         transac_dict[self.type] = [self.description, self.amount]
         print(transac_dict)
 
@@ -28,3 +28,4 @@ transac_description = input("Briefly describe your transaction: ").capitalize()
 transac_amount = int(input("Enter your transaction amount: "))
 
 transaction = Transaction(transac_type, transac_description, transac_amount)
+transaction.transac_data()
