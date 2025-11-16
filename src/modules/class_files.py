@@ -8,7 +8,7 @@ class Transaction:
         self.amount = amount            #⬅️ Let this be a integer
 
     def transac_data(self):
-        transac_dict = {"Type:"}
+        transac_dict = {"Type:"}     #⬅️ Currently here, figuring out how to add user inputs as key-values
         transac_dict[self.type] = [self.description, self.amount]
         print(transac_dict)
 
