@@ -16,6 +16,7 @@ class Budget:
     def __init__(self, money, transaction):
         self.money = money
         all_transactions = []
+        total_available_money = 0
         pass
 
 
