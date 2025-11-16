@@ -1,0 +1,32 @@
+Includes:
+✔ main.py
+
+- The entry point that runs the program
+
+- Uses your classes
+
+- Contains no class definitions (keeps it clean)
+
+✔ /modules folder
+
+A place for:
+
+- class definitions
+
+- helper functions
+
+- utility modules
+
+- your imports
+
+Example modules:
+
+product.py
+
+inventory_manager.py
+
+menu_system.py
+
+utils.py
+
+This is a professional-grade approach showing modularization and separation of concerns.

@@ -1,4 +1,4 @@
-# Personal Budget Manager
+## Personal Budget Manager
 
 A simple, modular, object-oriented Python app that allows you to
 track expenses, income, categories, and remaining budget. This project was built
