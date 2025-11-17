@@ -94,7 +94,7 @@ transac_date = input("Enter todays date: ")
 transac_description = input("Briefly describe your transaction: ").capitalize()
 transac_amount = int(input("Enter your transaction amount: $"))
 
-
+#⬇️ This for loop adds all user input into new dict. and appends that dict to the list
 for key in transac_dictionary:
     if transac_type == key:
         new_dict = {}
