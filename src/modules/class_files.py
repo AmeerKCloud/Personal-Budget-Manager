@@ -42,6 +42,7 @@ class Budget:
         pass
 
     def show_transactions(self):
+        
         pass
 
 transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
