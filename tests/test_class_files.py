@@ -26,7 +26,7 @@ class Transaction:
         return transac_dict
 
 
-class Budget:
+class Budget:                           #⬅️Currently trying to figure out how to make use of this class
     """Stores total available money.
     Stores all transactions in a list."""
 
@@ -60,6 +60,14 @@ transaction = Transaction(transac_type, transac_date, transac_description, trans
 print(transaction.transac_data())
 
 # transac_dictionary = transaction.transac_data()
+
+
+
+#TODO: 
+# - Currently trying to figure how to make use of the info from the completed 'Transaction'
+# class to input it into the 'Budget' class to make use of that class as per the program 
+# requirements.
+
 
 
 
