@@ -57,11 +57,11 @@ transac_amount = int(input("Enter your transaction amount: $"))
 
 transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
 
-print(transaction.transac_data())
+# print(transaction.transac_data())
 
 transac_data = transaction.transac_data()
 
-
+print(transac_data["income"])
 
 #TODO: 
 # - Currently trying to figure how to make use of the info from the completed 'Transaction'
