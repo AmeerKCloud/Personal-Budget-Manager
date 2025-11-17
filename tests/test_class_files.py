@@ -15,7 +15,7 @@ class Transaction:
             "income" : [],
             "expense" : [],
         }
-        
+
         for key in transac_dict:
             if self.type == key:
                 new_dict = {}
@@ -23,7 +23,7 @@ class Transaction:
                 new_dict["description"] = self.description
                 new_dict["amount"] = self.amount
                 transac_dict[key].append(new_dict)
-                print(transac_dict[key])
+                # print(transac_dict[key])
         return transac_dict
 
 
@@ -49,7 +49,6 @@ class Budget:
         pass
 
     def show_transactions(self):
-        
         pass
 
 transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
@@ -58,7 +57,10 @@ transac_description = input("Briefly describe your transaction: ").capitalize()
 transac_amount = int(input("Enter your transaction amount: $"))
 
 transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
-transac_dictionary = transaction.transac_data()
+
+print(transaction.transac_data())
+
+# transac_dictionary = transaction.transac_data()
 
 
 
