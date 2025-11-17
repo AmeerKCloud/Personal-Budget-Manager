@@ -27,7 +27,7 @@ class Budget:
 
 transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
 transac_description = input("Briefly describe your transaction: ").capitalize()
-transac_amount = int(input("Enter your transaction amount: "))
+transac_amount = int(input("Enter your transaction amount: $"))
 
 transaction = Transaction(transac_type, transac_description, transac_amount)
 transaction.transac_data()
