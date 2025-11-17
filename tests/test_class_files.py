@@ -14,7 +14,8 @@ class Transaction:
         transac_dict = {
             "income" : [],
             "expense" : [],
-        } 
+        }
+        
         for key in transac_dict:
             if self.type == key:
                 new_dict = {}
