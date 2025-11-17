@@ -16,7 +16,8 @@ class Transaction:
         transac_dict[self.type]["date"] = self.date
         transac_dict[self.type]["description"] = self.description
         transac_dict[self.type]["amount"] = self.amount
-        print(transac_dict)
+        # print(transac_dict)
+        return transac_dict
 
 
 class Budget:
@@ -49,4 +50,6 @@ transac_description = input("Briefly describe your transaction: ").capitalize()
 transac_amount = int(input("Enter your transaction amount: $"))
 
 transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
+transaction.transac_data()
+
 transaction.transac_data()
