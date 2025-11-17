@@ -23,7 +23,6 @@ class Transaction:
                 new_dict["description"] = self.description
                 new_dict["amount"] = self.amount
                 transac_dict[key].append(new_dict)
-                # print(transac_dict[key])
         return transac_dict
 
 
