@@ -11,7 +11,10 @@ class Transaction:
         """Stores type (“income” or “expense”), 
         description, and amount."""
 
-        transac_list = [] 
+        transac_list = [
+            {},
+            {}
+        ] 
         transac_list[self.type] = {}
         transac_list[self.type]["date"] = self.date
         transac_list[self.type]["description"] = self.description
@@ -95,14 +98,14 @@ transac_dictionary = transaction.transac_data()
 # transac_amount = int(input("Enter your transaction amount: $"))
 
 # #⬇️ This for loop adds all user input into new dict. and appends that dict to the list
-# for key in transac_list:
-#     if transac_type == key:
-#         new_dict = {}
-#         new_dict["date"] = transac_date
-#         new_dict["description"] = transac_description
-#         new_dict["amount"] = transac_amount
-#         transac_list[key].append(new_dict)
-#         print(transac_list[key])
+for key in transac_list:
+    if transac_type == key:
+        new_dict = {}
+        new_dict["date"] = transac_date
+        new_dict["description"] = transac_description
+        new_dict["amount"] = transac_amount
+        transac_list[key].append(new_dict)
+        print(transac_list[key])
 
 
 
