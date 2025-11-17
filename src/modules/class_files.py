@@ -40,6 +40,7 @@ class Budget:
         pass
 
 transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
+transac_date = input("Enter todays date: ")
 transac_description = input("Briefly describe your transaction: ").capitalize()
 transac_amount = int(input("Enter your transaction amount: $"))
 
