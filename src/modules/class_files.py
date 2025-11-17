@@ -96,6 +96,4 @@ for key in transac_dictionary:
         transac_dictionary[key].append(new_dict)
         print(transac_dictionary[key])
 
-        # transac_dictionary[key]["date"] = transac_date
-        # transac_dictionary[key]["description"] = transac_description
-        # transac_dictionary[key]["amount"] = transac_amount
+
