@@ -83,5 +83,7 @@ transac_dictionary = {
 
 
 
+
 for key in transac_dictionary:
-    print(transac_dictionary[key])
+    if key == "income":
+        print(transac_dictionary[key][1])
