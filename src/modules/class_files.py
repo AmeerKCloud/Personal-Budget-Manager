@@ -54,29 +54,34 @@
 # transac_dictionary = transaction.transac_data()
 
 
-transac_dictionary = {              #⬅️ This is a test dictionary to experiement and work our for-loop out with.
-    "income" : {
-        "date" : "11/17/2025",
-        "description" : "paycheck",
-        "amount" : 250,
-    },
-    "expense" : {
-        "date" : "10/20/2025",
-        "description" : "groceries",
-        "amount" : 100,
-    },
-    "income" : {
-        "date" : "09/10/2025",
-        "description" : "groceries",
-        "amount" : 100,
-    },
-    "expense" : {
-        "date" : "08/15/2025",
-        "description" : "groceries",
-        "amount" : 100,
-    },
+transac_dictionary = {
+    "income": [
+        {
+            "date": "11/17/2025",
+            "description": "paycheck",
+            "amount": 250,
+        },
+        {
+            "date": "09/10/2025",
+            "description": "groceries",
+            "amount": 100,
+        }
+    ],
+    "expense": [
+        {
+            "date": "10/20/2025",
+            "description": "groceries",
+            "amount": 100,
+        },
+        {
+            "date": "08/15/2025",
+            "description": "groceries",
+            "amount": 100,
+        }
+    ]
 }
 
 
+
 for key in transac_dictionary:
-    print(transac_dictionary[key]["date"])
+    print(transac_dictionary[key])
