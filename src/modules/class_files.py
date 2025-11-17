@@ -2,14 +2,16 @@
 
 class Transaction:
     """Stores type (“income” or “expense”), description, and amount."""
-    def __init__(self, type, description, amount):
+    def __init__(self, type, date, description, amount):
         self.type = type
+        self.date = date
         self.description = description
         self.amount = amount            #⬅️ Let this be a integer
 
     def transac_data(self):
         transac_dict = {} 
         transac_dict[self.type] = {}
+        transac_dict[self.type]["date"] = self.date
         transac_dict[self.type]["description"] = self.description
         transac_dict[self.type]["amount"] = self.amount
         print(transac_dict)
@@ -23,6 +25,18 @@ class Budget:
         self.money = money
         all_transactions = []
         total_available_money = 0
+        pass
+
+    def add_income(self):
+        pass
+
+    def add_expense(self):
+        pass
+
+    def calculate_balance(self):
+        pass
+
+    def show_transactions(self):
         pass
 
 transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
