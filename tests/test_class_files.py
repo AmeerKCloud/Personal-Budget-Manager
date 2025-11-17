@@ -1,11 +1,11 @@
 # Here go all of the test-class code.
 
-class Transaction:
+class Transaction:                                         #⬅️ This class is working as desired.
     def __init__(self, type, date, description, amount):
         self.type = type
         self.date = date
         self.description = description
-        self.amount = amount            #⬅️ Let this be a integer
+        self.amount = amount
 
     def transac_data(self):
         """Stores type (“income” or “expense”), 
