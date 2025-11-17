@@ -11,13 +11,13 @@ class Transaction:
         """Stores type (“income” or “expense”), 
         description, and amount."""
 
-        transac_dict = {} 
-        transac_dict[self.type] = {}
-        transac_dict[self.type]["date"] = self.date
-        transac_dict[self.type]["description"] = self.description
-        transac_dict[self.type]["amount"] = self.amount
-        # print(transac_dict)
-        return transac_dict
+        transac_list = [] 
+        transac_list[self.type] = {}
+        transac_list[self.type]["date"] = self.date
+        transac_list[self.type]["description"] = self.description
+        transac_list[self.type]["amount"] = self.amount
+        # print(transac_list)
+        return transac_list
 
 
 class Budget:
@@ -60,9 +60,9 @@ transac_dictionary = transaction.transac_data()
 
 
 
-#⬇️ Test dictionary
+# #⬇️ Test dictionary
 
-# transac_dictionary = {
+# transac_list = {
 #     "income": [
 #         {
 #             "date": "11/17/2025",
@@ -89,20 +89,20 @@ transac_dictionary = transaction.transac_data()
 #     ]
 # }
 
-transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
-transac_date = input("Enter todays date: ")
-transac_description = input("Briefly describe your transaction: ").capitalize()
-transac_amount = int(input("Enter your transaction amount: $"))
+# transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
+# transac_date = input("Enter todays date: ")
+# transac_description = input("Briefly describe your transaction: ").capitalize()
+# transac_amount = int(input("Enter your transaction amount: $"))
 
-#⬇️ This for loop adds all user input into new dict. and appends that dict to the list
-for key in transac_dictionary:
-    if transac_type == key:
-        new_dict = {}
-        new_dict["date"] = transac_date
-        new_dict["description"] = transac_description
-        new_dict["amount"] = transac_amount
-        transac_dictionary[key].append(new_dict)
-        print(transac_dictionary[key])
+# #⬇️ This for loop adds all user input into new dict. and appends that dict to the list
+# for key in transac_list:
+#     if transac_type == key:
+#         new_dict = {}
+#         new_dict["date"] = transac_date
+#         new_dict["description"] = transac_description
+#         new_dict["amount"] = transac_amount
+#         transac_list[key].append(new_dict)
+#         print(transac_list[key])
 
 
 
