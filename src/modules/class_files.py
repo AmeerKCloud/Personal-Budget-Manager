@@ -50,6 +50,6 @@ transac_description = input("Briefly describe your transaction: ").capitalize()
 transac_amount = int(input("Enter your transaction amount: $"))
 
 transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
-transaction.transac_data()
+transac_dictionary = transaction.transac_data()
 
-transaction.transac_data()
+print(transac_dictionary)
