@@ -62,32 +62,32 @@ transac_dictionary = transaction.transac_data()
 
 #⬇️ Test dictionary
 
-transac_dictionary = {
-    "income": [
-        {
-            "date": "11/17/2025",
-            "description": "paycheck",
-            "amount": 250,
-        },
-        {
-            "date": "09/10/2025",
-            "description": "groceries",
-            "amount": 100,
-        }
-    ],
-    "expense": [
-        {
-            "date": "10/20/2025",
-            "description": "groceries",
-            "amount": 100,
-        },
-        {
-            "date": "08/15/2025",
-            "description": "groceries",
-            "amount": 100,
-        }
-    ]
-}
+# transac_dictionary = {
+#     "income": [
+#         {
+#             "date": "11/17/2025",
+#             "description": "paycheck",
+#             "amount": 250,
+#         },
+#         {
+#             "date": "09/10/2025",
+#             "description": "groceries",
+#             "amount": 100,
+#         }
+#     ],
+#     "expense": [
+#         {
+#             "date": "10/20/2025",
+#             "description": "groceries",
+#             "amount": 100,
+#         },
+#         {
+#             "date": "08/15/2025",
+#             "description": "groceries",
+#             "amount": 100,
+#         }
+#     ]
+# }
 
 transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
 transac_date = input("Enter todays date: ")
