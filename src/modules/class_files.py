@@ -8,7 +8,9 @@ class Transaction:
         self.amount = amount            #⬅️ Let this be a integer
 
     def transac_data(self):
-        """Stores type (“income” or “expense”), description, and amount."""
+        """Stores type (“income” or “expense”), 
+        description, and amount."""
+        
         transac_dict = {} 
         transac_dict[self.type] = {}
         transac_dict[self.type]["date"] = self.date
