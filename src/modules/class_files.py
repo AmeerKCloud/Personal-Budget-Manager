@@ -78,5 +78,5 @@ transac_dictionary = {              #⬅️ This is a test dictionary to experie
 }
 
 
-for key, value in transac_dictionary.items():       #⬅️ For-loop to work out.
-    print(f"{key}: {value}")
+for key in transac_dictionary:
+    print(transac_dictionary[key]["date"])
