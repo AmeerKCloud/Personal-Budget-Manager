@@ -1,7 +1,6 @@
 
 
 class Transaction:
-    """Stores type (“income” or “expense”), description, and amount."""
     def __init__(self, type, date, description, amount):
         self.type = type
         self.date = date
@@ -9,6 +8,7 @@ class Transaction:
         self.amount = amount            #⬅️ Let this be a integer
 
     def transac_data(self):
+        """Stores type (“income” or “expense”), description, and amount."""
         transac_dict = {} 
         transac_dict[self.type] = {}
         transac_dict[self.type]["date"] = self.date
@@ -44,5 +44,5 @@ transac_date = input("Enter todays date: ")
 transac_description = input("Briefly describe your transaction: ").capitalize()
 transac_amount = int(input("Enter your transaction amount: $"))
 
-transaction = Transaction(transac_type, transac_description, transac_amount)
+transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
 transaction.transac_data()
