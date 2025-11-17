@@ -10,7 +10,7 @@ class Transaction:
     def transac_data(self):
         """Stores type (“income” or “expense”), 
         description, and amount."""
-        
+
         transac_dict = {} 
         transac_dict[self.type] = {}
         transac_dict[self.type]["date"] = self.date
@@ -30,9 +30,11 @@ class Budget:
         pass
 
     def add_income(self):
+        """Returns the sum of all income transactions."""
         pass
 
     def add_expense(self):
+        """Returns the sum of all expense transactions."""
         pass
 
     def calculate_balance(self):
