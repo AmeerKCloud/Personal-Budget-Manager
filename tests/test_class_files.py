@@ -59,7 +59,7 @@ transaction = Transaction(transac_type, transac_date, transac_description, trans
 
 print(transaction.transac_data())
 
-# transac_dictionary = transaction.transac_data()
+transac_data = transaction.transac_data()
 
 
 
