@@ -59,7 +59,9 @@ transac_amount = int(input("Enter your transaction amount: $"))
 transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
 transac_data = transaction.transac_data()
 
-monetary_amount = transac_data["income"][0]["amount"]
+for key in transac_data:
+    if key == "income" or key == "expense":
+        monetary_amount = transac_data[key][0]["amount"]
 
 
 #TODO: 
