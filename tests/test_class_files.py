@@ -53,13 +53,13 @@ class Budget:                           #⬅️Currently trying to figure out ho
 
 while True:
 
-    transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
-    transac_data = transaction.transac_data()
-
     transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
     transac_date = input("Enter todays date: ")
     transac_description = input("Briefly describe your transaction: ").capitalize()
     transac_amount = int(input("Enter your transaction amount: $"))
+
+    transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
+    transac_data = transaction.transac_data()
 
     for key in transac_data:
         if key == "income" or key == "expense":
