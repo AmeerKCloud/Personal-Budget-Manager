@@ -51,20 +51,28 @@ class Budget:                           #⬅️Currently trying to figure out ho
         """Displays entire history of all transactions"""
         pass
 
-transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
-transac_date = input("Enter todays date: ")
-transac_description = input("Briefly describe your transaction: ").capitalize()
-transac_amount = int(input("Enter your transaction amount: $"))
+while True:
 
-transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
-transac_data = transaction.transac_data()
+    transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
+    transac_data = transaction.transac_data()
 
-for key in transac_data:
-    if key == "income" or key == "expense":
-        for item in range(len(transac_data[key])):
-            monetary_amount = transac_data[key][item]["amount"]
-print(monetary_amount)
-print(type(monetary_amount))
+    transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
+    transac_date = input("Enter todays date: ")
+    transac_description = input("Briefly describe your transaction: ").capitalize()
+    transac_amount = int(input("Enter your transaction amount: $"))
+
+    for key in transac_data:
+        if key == "income" or key == "expense":
+            for item in range(len(transac_data[key])):
+                monetary_amount = transac_data[key][item]["amount"]
+    print(monetary_amount)
+    print(type(monetary_amount))
+
+    exit = input("Exit? 'y' or 'n'? ").lower()
+
+    if exit:
+        break
+
 
 
 #TODO: 
