@@ -57,8 +57,6 @@ transac_amount = int(input("Enter your transaction amount: $"))
 
 transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
 
-# print(transaction.transac_data())
-
 transac_data = transaction.transac_data()
 
 monetary_amount = transac_data["income"][0]["amount"]
