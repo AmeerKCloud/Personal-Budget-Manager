@@ -61,7 +61,8 @@ transaction = Transaction(transac_type, transac_date, transac_description, trans
 
 transac_data = transaction.transac_data()
 
-print(transac_data["income"]["amount"])
+monetary_amount = transac_data["income"][0]["amount"]
+
 
 #TODO: 
 # - Currently trying to figure how to make use of the info from the completed 'Transaction'
