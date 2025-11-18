@@ -59,10 +59,10 @@ transac_amount = int(input("Enter your transaction amount: $"))
 transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
 transac_data = transaction.transac_data()
 
-for key_list in transac_data:
-    if key_list == "income" or key_list == "expense":
-        for item in range(len(key_list) - 1):
-            monetary_amount = transac_data[key_list][item]["amount"]
+for key in transac_data:
+    if key == "income" or key == "expense":
+        for item in range(len(key) - 1):
+            monetary_amount = transac_data[key][item]["amount"]
 print(monetary_amount)
 print(type(monetary_amount))
 
