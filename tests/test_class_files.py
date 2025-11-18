@@ -62,6 +62,8 @@ transac_data = transaction.transac_data()
 for key in transac_data:
     if key == "income" or key == "expense":
         monetary_amount = transac_data[key][0]["amount"]
+print(monetary_amount)
+print(type(monetary_amount))
 
 
 #TODO: 
