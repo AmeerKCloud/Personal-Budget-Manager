@@ -56,21 +56,22 @@ while True:
     transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
     transac_date = input("Enter todays date: ")
     transac_description = input("Briefly describe your transaction: ").capitalize()
-    transac_amount = int(input("Enter your transaction amount: $"))
+    transac_amount = float(input("Enter your transaction amount: $"))
 
-    transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
+    transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)    #⬅️ Object
     transac_data = transaction.transac_data()
+    print(transac_data)
 
     for key in transac_data:
         if key == "income" or key == "expense":
             for item in range(len(transac_data[key])):
-                monetary_amount = transac_data[key][item]["amount"]
+                monetary_amount = transac_data[key][item]["amount"] 
     print(monetary_amount)
     print(type(monetary_amount))
 
     exit = input("Exit? 'y' or 'n'? ").lower()
 
-    if exit:
+    if exit == "y":
         break
 
 
@@ -79,6 +80,8 @@ while True:
 # - Currently trying to figure how to make use of the info from the completed 'Transaction'
 # class to input it into the 'Budget' class to make use of that class as per the program 
 # requirements.
+# - - Previous entry gets erased 
+# - - - Might be caused by the object 'transaction' being placed within the 'while' loop?
 
 
 
