@@ -48,6 +48,7 @@ class Budget:                           #⬅️Currently trying to figure out ho
         pass
 
     def show_transactions(self):
+        """Displays entire history of all transactions"""
         pass
 
 transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
@@ -56,7 +57,6 @@ transac_description = input("Briefly describe your transaction: ").capitalize()
 transac_amount = int(input("Enter your transaction amount: $"))
 
 transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)
-
 transac_data = transaction.transac_data()
 
 monetary_amount = transac_data["income"][0]["amount"]
