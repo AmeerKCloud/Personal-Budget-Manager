@@ -61,7 +61,7 @@ transac_data = transaction.transac_data()
 
 for key_list in transac_data:
     if key_list == "income" or key_list == "expense":
-        for item in key_list:
+        for item in range(len(key_list) - 1):
             monetary_amount = transac_data[key_list][item]["amount"]
 print(monetary_amount)
 print(type(monetary_amount))
