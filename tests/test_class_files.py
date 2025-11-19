@@ -51,6 +51,9 @@ class Budget:                           #⬅️Currently trying to figure out ho
         """Displays entire history of all transactions"""
         pass
 
+
+transaction = Transaction()    #⬅️ Object
+
 while True:
 
     transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
@@ -58,8 +61,7 @@ while True:
     transac_description = input("Briefly describe your transaction: ").capitalize()
     transac_amount = float(input("Enter your transaction amount: $"))
 
-    transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)    #⬅️ Object
-    transac_data = transaction.transac_data()
+    transac_data = transaction.transac_data(transac_type, transac_date, transac_description, transac_amount)
     print(transac_data)
 
     for key in transac_data:
