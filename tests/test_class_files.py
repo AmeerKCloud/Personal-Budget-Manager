@@ -215,3 +215,79 @@ while True:
 
 #     if exit == "y":
 #         break
+
+
+#______ Reserve 2 _______:
+
+# class Transaction:                                         #⬅️ This class is working as desired.
+#     def __init__(self, type, date, description, amount):
+#         self.type = type
+#         self.date = date
+#         self.description = description
+#         self.amount = amount
+
+#     def current_transac_data(self):
+#         """Stores type (“income” or “expense”), 
+#         description, and amount."""
+
+#         current_transac_dict = {
+#             "income" : [],
+#             "expense" : [],
+#         }
+
+#         for key in current_transac_dict:
+#             if self.type == key:
+#                 new_dict = {}
+#                 new_dict["date"] = self.date
+#                 new_dict["description"] = self.description
+#                 new_dict["amount"] = self.amount
+#                 current_transac_dict[key].append(new_dict)
+#         return current_transac_dict
+
+
+# class Budget:                           #⬅️Currently trying to figure out how to make use of this class
+#     """Stores total available money.
+#     Stores all transactions in a list."""
+
+#     def __init__(self, money, transaction):
+#         self.money = money
+#         all_transactions = []
+#         total_available_money = 0
+#         pass
+
+#     def add_income(self):
+#         """Returns the sum of all income transactions."""
+#         pass
+
+#     def add_expense(self):
+#         """Returns the sum of all expense transactions."""
+#         pass
+
+#     def calculate_balance(self):
+#         pass
+
+#     def show_transactions(self):
+#         """Displays entire history of all transactions"""
+#         pass
+
+# while True:
+
+#     transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
+#     transac_date = input("Enter todays date: ")
+#     transac_description = input("Briefly describe your transaction: ").capitalize()
+#     transac_amount = float(input("Enter your transaction amount: $"))
+
+#     transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)    #⬅️ Object
+#     current_transac_data = transaction.current_transac_data()
+#     print(current_transac_data)
+
+#     for key in current_transac_data:
+#         for list_item in current_transac_data[key]:
+#             monetary_amount = list_item["amount"]
+#     print(monetary_amount)
+#     print(type(monetary_amount))
+
+#     exit = input("Exit? 'y' or 'n'? ").lower()
+
+#     if exit == "y":
+#         break
