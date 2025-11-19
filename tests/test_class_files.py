@@ -1,13 +1,13 @@
 # Here go all of the test-class code.
 
 class Transaction:                                         #⬅️ This class is working as desired.
-    def __init__(self, type, date, description, amount):
-        self.type = type
-        self.date = date
-        self.description = description
-        self.amount = amount
+    # def __init__(self, type, date, description, amount):
+    #     self.type = type
+    #     self.date = date
+    #     self.description = description
+    #     self.amount = amount
 
-    def transac_data(self):
+    def transac_data(self, type, date, description, amount):
         """Stores type (“income” or “expense”), 
         description, and amount."""
 
@@ -17,11 +17,11 @@ class Transaction:                                         #⬅️ This class is
         }
 
         for key in transac_dict:
-            if self.type == key:
+            if type == key:
                 new_dict = {}
-                new_dict["date"] = self.date
-                new_dict["description"] = self.description
-                new_dict["amount"] = self.amount
+                new_dict["date"] = date
+                new_dict["description"] = description
+                new_dict["amount"] = amount
                 transac_dict[key].append(new_dict)
         return transac_dict
 
@@ -139,7 +139,32 @@ while True:
 
 
 
+# -------------- ⬇️ Reserve Code ⬇️ ----------------
 
 
+# class Transaction:                                         #⬅️ This class is working as desired.
+#     def __init__(self, type, date, description, amount):
+#         self.type = type
+#         self.date = date
+#         self.description = description
+#         self.amount = amount
+
+#     def transac_data(self):
+#         """Stores type (“income” or “expense”), 
+#         description, and amount."""
+
+#         transac_dict = {
+#             "income" : [],
+#             "expense" : [],
+#         }
+
+#         for key in transac_dict:
+#             if self.type == key:
+#                 new_dict = {}
+#                 new_dict["date"] = self.date
+#                 new_dict["description"] = self.description
+#                 new_dict["amount"] = self.amount
+#                 transac_dict[key].append(new_dict)
+#         return transac_dict
 
 
