@@ -1,13 +1,13 @@
 # Here go all of the test-class code.
 
 class Transaction:                                         #⬅️ This class is working as desired.
-    # def __init__(self, type, date, description, amount):
-    #     self.type = type
-    #     self.date = date
-    #     self.description = description
-    #     self.amount = amount
+    def __init__(self, type, date, description, amount):
+        self.type = type
+        self.date = date
+        self.description = description
+        self.amount = amount
 
-    def transac_data(self, type, date, description, amount):
+    def transac_data(self):
         """Stores type (“income” or “expense”), 
         description, and amount."""
 
@@ -17,11 +17,11 @@ class Transaction:                                         #⬅️ This class is
         }
 
         for key in transac_dict:
-            if type == key:
+            if self.type == key:
                 new_dict = {}
-                new_dict["date"] = date
-                new_dict["description"] = description
-                new_dict["amount"] = amount
+                new_dict["date"] = self.date
+                new_dict["description"] = self.description
+                new_dict["amount"] = self.amount
                 transac_dict[key].append(new_dict)
         return transac_dict
 
@@ -51,9 +51,6 @@ class Budget:                           #⬅️Currently trying to figure out ho
         """Displays entire history of all transactions"""
         pass
 
-
-transaction = Transaction()    #⬅️ Object
-
 while True:
 
     transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
@@ -61,7 +58,8 @@ while True:
     transac_description = input("Briefly describe your transaction: ").capitalize()
     transac_amount = float(input("Enter your transaction amount: $"))
 
-    transac_data = transaction.transac_data(transac_type, transac_date, transac_description, transac_amount)
+    transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)    #⬅️ Object
+    transac_data = transaction.transac_data()
     print(transac_data)
 
     for key in transac_data:
