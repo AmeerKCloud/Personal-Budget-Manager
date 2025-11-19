@@ -63,10 +63,13 @@ while True:
     print(current_transac_data)
 
     for key in current_transac_data:
-        for list_item in current_transac_data[key]:
-            monetary_amount = list_item["amount"]
+        if key == transac_type:
+            for list_item in current_transac_data[key]:
+                monetary_amount = list_item["amount"]
+                transaction = current_transac_data[key]
     print(monetary_amount)
     print(type(monetary_amount))
+    print(transaction)
 
     exit = input("Exit? 'y' or 'n'? ").lower()
 
