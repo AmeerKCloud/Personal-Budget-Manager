@@ -168,3 +168,50 @@ while True:
 #         return transac_dict
 
 
+# class Budget:                           #⬅️Currently trying to figure out how to make use of this class
+#     """Stores total available money.
+#     Stores all transactions in a list."""
+
+#     def __init__(self, money, transaction):
+#         self.money = money
+#         all_transactions = []
+#         total_available_money = 0
+#         pass
+
+#     def add_income(self):
+#         """Returns the sum of all income transactions."""
+#         pass
+
+#     def add_expense(self):
+#         """Returns the sum of all expense transactions."""
+#         pass
+
+#     def calculate_balance(self):
+#         pass
+
+#     def show_transactions(self):
+#         """Displays entire history of all transactions"""
+#         pass
+
+# while True:
+
+#     transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
+#     transac_date = input("Enter todays date: ")
+#     transac_description = input("Briefly describe your transaction: ").capitalize()
+#     transac_amount = float(input("Enter your transaction amount: $"))
+
+#     transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)    #⬅️ Object
+#     transac_data = transaction.transac_data()
+#     print(transac_data)
+
+#     for key in transac_data:
+#         # if key == "income" or key == "expense":
+#         for item in range(len(transac_data[key])):
+#             monetary_amount = transac_data[key][item]["amount"] 
+#     print(monetary_amount)
+#     print(type(monetary_amount))
+
+#     exit = input("Exit? 'y' or 'n'? ").lower()
+
+#     if exit == "y":
+#         break
