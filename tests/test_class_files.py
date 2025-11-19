@@ -7,7 +7,7 @@ class Transaction:                                         #⬅️ This class is
         self.description = description
         self.amount = amount
 
-    def transac_data(self):
+    def current_transac_data(self):
         """Stores type (“income” or “expense”), 
         description, and amount."""
 
@@ -59,13 +59,13 @@ while True:
     transac_amount = float(input("Enter your transaction amount: $"))
 
     transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)    #⬅️ Object
-    transac_data = transaction.transac_data()
-    print(transac_data)
+    current_transac_data = transaction.current_transac_data()
+    print(current_transac_data)
 
-    for key in transac_data:
+    for key in current_transac_data:
         # if key == "income" or key == "expense":
-        for item in range(len(transac_data[key])):
-            monetary_amount = transac_data[key][item]["amount"] 
+        for item in range(len(current_transac_data[key])):
+            monetary_amount = current_transac_data[key][item]["amount"] 
     print(monetary_amount)
     print(type(monetary_amount))
 
