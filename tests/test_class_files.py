@@ -11,19 +11,19 @@ class Transaction:                                         #⬅️ This class is
         """Stores type (“income” or “expense”), 
         description, and amount."""
 
-        transac_dict = {
+        current_transac_dict = {
             "income" : [],
             "expense" : [],
         }
 
-        for key in transac_dict:
+        for key in current_transac_dict:
             if self.type == key:
                 new_dict = {}
                 new_dict["date"] = self.date
                 new_dict["description"] = self.description
                 new_dict["amount"] = self.amount
-                transac_dict[key].append(new_dict)
-        return transac_dict
+                current_transac_dict[key].append(new_dict)
+        return current_transac_dict
 
 
 class Budget:                           #⬅️Currently trying to figure out how to make use of this class
@@ -64,7 +64,7 @@ while True:
 
     for key in current_transac_data:
         for list_item in current_transac_data[key]:
-            monetary_amount = list_item["amount"] 
+            monetary_amount = list_item["amount"]
     print(monetary_amount)
     print(type(monetary_amount))
 
