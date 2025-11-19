@@ -1,31 +1,5 @@
 # Here go all of the test-class code.
 
-class Transaction:                                         #⬅️ This class is working as desired.
-    def __init__(self, type, date, description, amount):
-        self.type = type
-        self.date = date
-        self.description = description
-        self.amount = amount
-
-    def current_transac_data(self):
-        """Stores type (“income” or “expense”), 
-        description, and amount."""
-
-        transac_dict = {
-            "income" : [],
-            "expense" : [],
-        }
-
-        for key in transac_dict:
-            if self.type == key:
-                new_dict = {}
-                new_dict["date"] = self.date
-                new_dict["description"] = self.description
-                new_dict["amount"] = self.amount
-                transac_dict[key].append(new_dict)
-        return transac_dict
-
-
 class Budget:                           #⬅️Currently trying to figure out how to make use of this class
     """Stores total available money.
     Stores all transactions in a list."""
@@ -51,6 +25,48 @@ class Budget:                           #⬅️Currently trying to figure out ho
         """Displays entire history of all transactions"""
         pass
 
+
+class Transaction:                                         #⬅️ This class is working as desired.
+    def __init__(self, type, date, description, amount):
+        self.type = type
+        self.date = date
+        self.description = description
+        self.amount = amount
+
+    budget = Budget()
+
+    def current_transac_data(self):
+        """Stores type (“income” or “expense”), 
+        description, and amount."""
+
+        transac_dict = {
+            "income" : [],
+            "expense" : [],
+        }
+
+        for key in transac_dict:
+            if self.type == key:
+                new_dict = {}
+                new_dict["date"] = self.date
+                new_dict["description"] = self.description
+                new_dict["amount"] = self.amount
+                transac_dict[key].append(new_dict)
+        # return transac_dict
+
+        current_transac_data = transaction.current_transac_data()
+        print(current_transac_data)
+
+        for key in current_transac_data:
+            # if key == "income" or key == "expense":
+            for item in range(len(current_transac_data[key])):
+                monetary_amount = current_transac_data[key][item]["amount"] 
+        print(monetary_amount)
+        print(type(monetary_amount))
+
+
+
+
+
 while True:
 
     transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
@@ -59,15 +75,6 @@ while True:
     transac_amount = float(input("Enter your transaction amount: $"))
 
     transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)    #⬅️ Object
-    current_transac_data = transaction.current_transac_data()
-    print(current_transac_data)
-
-    for key in current_transac_data:
-        # if key == "income" or key == "expense":
-        for item in range(len(current_transac_data[key])):
-            monetary_amount = current_transac_data[key][item]["amount"] 
-    print(monetary_amount)
-    print(type(monetary_amount))
 
     exit = input("Exit? 'y' or 'n'? ").lower()
 
