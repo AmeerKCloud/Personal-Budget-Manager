@@ -82,8 +82,9 @@ while True:
 # - Currently trying to figure how to make use of the info from the completed 'Transaction'
 # class to input it into the 'Budget' class to make use of that class as per the program 
 # requirements.
-# - - Previous entry gets erased 
-# - - - Might be caused by the object 'transaction' being placed within the 'while' loop?
+# - - Previous dict entry gets erased in 'Transaction' class
+# - - - So need to find way to transfer and permanently store all data in 'Budget' class
+# - - - Currently trying to do that with the dict. entry.
 
 
 
