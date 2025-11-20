@@ -60,10 +60,10 @@ budget = Budget()   #⬅️ Object
 
 while True:
 
-    transac_type = input("\nEnter your transaction type: 'income' or 'expense'? ").lower()
-    transac_date = input("Enter todays date: ")
+    transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
+    transac_date = input("Enter transaction date: ")
     transac_description = input("Briefly describe your transaction: ").capitalize()
-    transac_amount = float(input("Enter your transaction amount: $"))
+    transac_amount = float(input("Enter transaction amount: $"))
 
     transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)    #⬅️ Object
     current_transac_data = transaction.current_transac_data()
