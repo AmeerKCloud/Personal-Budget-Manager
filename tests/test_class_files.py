@@ -31,10 +31,7 @@ class Budget:                           #⬅️Currently trying to figure out ho
     """Stores total available money.
     Stores all transactions in a list."""
 
-    def __init__(self, money, transac_type, transaction):
-        self.money = money
-        self.transac_type = transac_type
-        self.transaction = transaction
+    def __init__(self):
         self.all_transactions = {}
         self.total_available_money = 0
 
@@ -49,11 +46,19 @@ class Budget:                           #⬅️Currently trying to figure out ho
     def calculate_balance(self):
         pass
 
-    def show_transactions(self):
+    def show_transactions(self, money, transaction, transac_type):
         """Displays entire history of all transactions"""
         
+        money = money
+        self.transac_type = transac_type
+        self.transaction = transaction
+
         self.all_transactions[self.transac_type] = self.transaction
         print(self.all_transactions)
+
+
+
+budget = Budget()   #⬅️ Object
 
 while True:
 
@@ -72,7 +77,6 @@ while True:
                 key = key
                 transaction = current_transac_data[key]
                 monetary_amount = list_item["amount"]
-            budget = Budget(monetary_amount, key, transaction)   #⬅️ Object
             budget.show_transactions()
     # print(monetary_amount)
     # print(type(monetary_amount))
