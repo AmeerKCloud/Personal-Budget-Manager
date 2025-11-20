@@ -39,17 +39,15 @@ class Budget:                           #⬅️Currently trying to figure out ho
         """Returns the sum of all income transactions."""
         pass
 
-    def add_expense(self):
+    def add_expense(self, money):
         """Returns the sum of all expense transactions."""
         pass
 
-    def calculate_balance(self):
+    def calculate_balance(self, money):
         pass
 
-    def show_transactions(self, money, transaction, transac_type):
+    def show_transactions(self, transaction, transac_type):
         """Displays entire history of all transactions"""
-        
-        money = money
         self.transac_type = transac_type
         self.transaction = transaction
 
