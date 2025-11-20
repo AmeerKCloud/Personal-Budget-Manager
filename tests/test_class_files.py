@@ -65,8 +65,9 @@ while True:
     for key in current_transac_data:
         if key == transac_type:
             for list_item in current_transac_data[key]:
-                monetary_amount = list_item["amount"]
+                key = key
                 transaction = current_transac_data[key]
+                monetary_amount = list_item["amount"]
     print(monetary_amount)
     print(type(monetary_amount))
     print(transaction)
