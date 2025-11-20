@@ -51,7 +51,7 @@ class Budget:                           #⬅️Currently trying to figure out ho
         self.transac_type = transac_type
         self.transaction = transaction
 
-        self.all_transactions[self.transac_type].append(self.transaction)
+        self.all_transactions[self.transac_type].append(self.transaction)  #⬅️ Issue is here. Need to figure out how to append to dict. value list.
         print(self.all_transactions)
 
 
@@ -67,7 +67,6 @@ while True:
 
     transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)    #⬅️ Object
     current_transac_data = transaction.current_transac_data()
-    print(current_transac_data)
 
     for key in current_transac_data:
         if key == transac_type:
@@ -75,11 +74,7 @@ while True:
                 key = key
                 transaction = current_transac_data[key]
                 monetary_amount = list_item["amount"]
-            budget.show_transactions(monetary_amount, transaction, key)
-            budget.show_transactions()
-    # print(monetary_amount)
-    # print(type(monetary_amount))
-    # print(transaction)
+            budget.show_transactions(transaction, key)
 
     exit = input("Exit? 'y' or 'n'? ").lower()
 
