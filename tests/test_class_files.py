@@ -33,11 +33,10 @@ class Budget:                           #⬅️Currently trying to figure out ho
 
     def __init__(self, money, transac_type, transaction):
         self.money = money
-        # self.transac_type = transac_type
+        self.transac_type = transac_type
         self.transaction = transaction
-        all_transactions = []
-        total_available_money = 0
-        pass
+        self.all_transactions = {}
+        self.total_available_money = 0
 
     def add_income(self):
         """Returns the sum of all income transactions."""
@@ -52,7 +51,9 @@ class Budget:                           #⬅️Currently trying to figure out ho
 
     def show_transactions(self):
         """Displays entire history of all transactions"""
-        pass
+        
+        self.all_transactions[self.transac_type] = self.transaction
+        print(self.all_transactions)
 
 while True:
 
