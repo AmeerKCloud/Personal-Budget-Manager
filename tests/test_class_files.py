@@ -53,7 +53,7 @@ class Budget:                           #⬅️Currently trying to figure out ho
         self.transac_type = transac_type
         self.transaction = transaction
 
-        self.all_transactions[self.transac_type] = self.transaction
+        self.all_transactions[self.transac_type].append(self.transaction)
         print(self.all_transactions)
 
 
