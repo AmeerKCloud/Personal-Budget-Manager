@@ -30,7 +30,7 @@ class Budget:                           #⬅️Currently trying to figure out ho
     """Stores total available money.
     Stores all transactions in a list."""
 
-    def __init__(self, money, transaction):
+    def __init__(self, money, transac_type, transaction):
         self.money = money
         all_transactions = []
         total_available_money = 0
