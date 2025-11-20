@@ -54,7 +54,7 @@ class Budget:                           #⬅️Currently trying to figure out ho
         self.transac_type = transac_type
         self.transaction = transaction
 
-        self.all_transactions[self.transac_type].append(self.transaction)  #⬅️ Issue is here. Need to figure out how to append to dict. value list.
+        self.all_transactions[self.transac_type].append(self.transaction)  #⬅️ Keep reviewing to understand the logic here.
         print(self.all_transactions)
 
 
