@@ -77,6 +77,7 @@ while True:
                 key = key
                 transaction = current_transac_data[key]
                 monetary_amount = list_item["amount"]
+            budget.show_transactions(monetary_amount, transaction, key)
             budget.show_transactions()
     # print(monetary_amount)
     # print(type(monetary_amount))
