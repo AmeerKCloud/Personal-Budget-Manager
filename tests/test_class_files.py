@@ -19,6 +19,7 @@ class Transaction:                                         #⬅️ This class is
         for key in current_transac_dict:
             if self.type == key:
                 new_dict = {}
+                new_dict["type"] = self.type
                 new_dict["date"] = self.date
                 new_dict["description"] = self.description
                 new_dict["amount"] = self.amount
@@ -32,6 +33,8 @@ class Budget:                           #⬅️Currently trying to figure out ho
 
     def __init__(self, money, transac_type, transaction):
         self.money = money
+        # self.transac_type = transac_type
+        self.transaction = transaction
         all_transactions = []
         total_available_money = 0
         pass
