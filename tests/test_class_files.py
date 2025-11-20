@@ -72,9 +72,12 @@ while True:
                 key = key
                 transaction = current_transac_data[key]
                 monetary_amount = list_item["amount"]
-    print(monetary_amount)
-    print(type(monetary_amount))
-    print(transaction)
+    # print(monetary_amount)
+    # print(type(monetary_amount))
+    # print(transaction)
+
+    budget = Budget(monetary_amount, key, transaction)   #⬅️ Object
+    budget.show_transactions()
 
     exit = input("Exit? 'y' or 'n'? ").lower()
 
