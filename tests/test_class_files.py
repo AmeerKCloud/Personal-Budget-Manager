@@ -32,7 +32,10 @@ class Budget:                           #⬅️Currently trying to figure out ho
     Stores all transactions in a list."""
 
     def __init__(self):
-        self.all_transactions = {}
+        self.all_transactions = {
+            "income": [],
+            "expense": [],
+        }
         self.total_available_money = 0
 
     def add_income(self):
@@ -72,7 +75,7 @@ while True:
         if key == transac_type:
             for list_item in current_transac_data[key]:
                 key = key
-                transaction = current_transac_data[key]
+                transaction = list_item
                 monetary_amount = list_item["amount"]
             budget.show_transactions(transaction, key)
 
@@ -87,11 +90,7 @@ while True:
 # - Currently trying to figure how to make use of the info from the completed 'Transaction'
 # class to input it into the 'Budget' class to make use of that class as per the program 
 # requirements.
-# - - Currently stuck on how to append the transaction info into the 'all_transactions' 
-# dictionary in the 'Budget' class.
-# - - - The issue is indicated in the comment above.
-# - - - Once that is figured out, then I can work on the methods to calculate income,
-# expenses, and balance.
+# - - Currently working calculate_balance() method in Budget class.
 
 
 
