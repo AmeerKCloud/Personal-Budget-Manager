@@ -50,8 +50,8 @@ class Budget:                           #⬅️Currently trying to figure out ho
         expense_total += money
         return expense_total
 
-    def calculate_balance(self, money):
-        self.total_available_money = self.add_expense(money) - self.add_income(money)
+    def calculate_balance(self):
+        self.total_available_money = self.add_income(self.money) - self.add_expense(self.money)
         return self.total_available_money
 
     def show_transactions(self, transaction, transac_type):
