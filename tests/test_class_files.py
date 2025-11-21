@@ -51,7 +51,7 @@ class Budget:                           #⬅️Currently trying to figure out ho
         return expense_total
 
     def calculate_balance(self):
-        self.total_available_money = self.add_income(self.money) - self.add_expense(self.money)
+        self.total_available_money =  
         return self.total_available_money
 
     def show_transactions(self, transaction, transac_type):
@@ -83,7 +83,7 @@ while True:
                 transaction = list_item                     #⬅️ This is the dict. inside the list.
                 monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
             budget.show_transactions(transaction, key)
-            print(budget.calculate_balance(monetary_amount))
+            print(budget.calculate_balance())
 
     exit = input("Exit? 'y' or 'n'? ").lower()
 
