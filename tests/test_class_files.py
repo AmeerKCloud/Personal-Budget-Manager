@@ -70,20 +70,24 @@ budget = Budget()   #⬅️ Object
 
 while True:
 
-    transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
-    transac_date = input("Enter transaction date: ")
-    transac_description = input("Briefly describe your transaction: ").capitalize()
-    transac_amount = float(input("Enter transaction amount: $"))
+    user_choice = input("\nChoose an option: (a) Add new transaction, (b) view all transactions, (c) view income total, (d) view expense total, (e) view balance, (f) exit: ").lower()
 
-    transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)    #⬅️ Object
-    current_transac_data = transaction.current_transac_data()
+    if user_choice == "a":
 
-    for key in current_transac_data:
-        if key == transac_type:
-            for list_item in current_transac_data[key]:
-                key = key
-                transaction = list_item                     #⬅️ This is the dict. inside the list.
-                monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
+        transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
+        transac_date = input("Enter transaction date: ")
+        transac_description = input("Briefly describe your transaction: ").capitalize()
+        transac_amount = float(input("Enter transaction amount: $"))
+
+        transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)    #⬅️ Object
+        current_transac_data = transaction.current_transac_data()
+
+        for key in current_transac_data:
+            if key == transac_type:
+                for list_item in current_transac_data[key]:
+                    key = key
+                    transaction = list_item                     #⬅️ This is the dict. inside the list.
+                    monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
             budget.show_transactions(transaction, key)
             budget.add_income(monetary_amount)
             budget.add_expense(monetary_amount)
