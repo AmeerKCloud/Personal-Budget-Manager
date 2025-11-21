@@ -50,9 +50,9 @@ class Budget:                           #⬅️Currently trying to figure out ho
         expense_total += money
         return expense_total
 
-    def calculate_balance(self):
-        balance = self.add_expense() - self.add_income()
-        return balance
+    def calculate_balance(self, money):
+        self.total_available_money = self.add_expense(money) - self.add_income(money)
+        return self.total_available_money
 
     def show_transactions(self, transaction, transac_type):
         """Displays entire history of all transactions"""
@@ -83,6 +83,7 @@ while True:
                 transaction = list_item                     #⬅️ This is the dict. inside the list.
                 monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
             budget.show_transactions(transaction, key)
+            print(budget.calculate_balance(monetary_amount))
 
     exit = input("Exit? 'y' or 'n'? ").lower()
 
