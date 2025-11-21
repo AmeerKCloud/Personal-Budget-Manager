@@ -11,7 +11,7 @@ class Transaction:                                         #⬅️ This class is
         """Stores type (“income” or “expense”), 
         description, and amount."""
 
-        current_transac_dict = {
+        self.current_transac_dict = {
             "income" : [],
             "expense" : [],
         }
