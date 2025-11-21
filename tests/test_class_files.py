@@ -42,7 +42,7 @@ class Budget:                           #⬅️Currently trying to figure out ho
         """Returns the sum of all income transactions."""
         income_total = 0
         income_total += money
-        return income_total
+        print(f"Your total income: {income_total}")
 
     def add_expense(self, money):
         """Returns the sum of all expense transactions."""
