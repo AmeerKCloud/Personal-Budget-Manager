@@ -63,8 +63,8 @@ class Budget:                           #⬅️Currently trying to figure out ho
 
         self.all_transactions[self.transac_type].append(self.transaction)  #⬅️ Keep reviewing to understand the logic here.
         print(f"\nAll your transactions so far:")
-        print(f"Income: {self.all_transactions["income"]}")
-        print(f"Expense: {self.all_transactions["expense"]}")
+        print(f"Income: {self.all_transactions['income']}")
+        print(f"Expense: {self.all_transactions['expense']}")
 
 
 
@@ -92,7 +92,14 @@ while True:
                     monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
             budget.show_transactions(transaction, key)
     elif user_choice == "b":
-        budget.show_transactions(transaction, key)
+        for key in current_transac_data:                        #⬅️ Getting ERROR: here if user selects 'b' first.
+            if key == transac_type:
+                for list_item in current_transac_data[key]:
+                    key = key
+                    transaction = list_item                     
+                    monetary_amount = list_item["amount"]       
+            budget.show_transactions(transaction, key)
+        # budget.show_transactions(transaction, key)
     elif user_choice == "c":
         budget.add_income(monetary_amount)
     elif user_choice == "d":
