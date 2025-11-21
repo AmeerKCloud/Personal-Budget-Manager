@@ -62,7 +62,9 @@ class Budget:                           #⬅️Currently trying to figure out ho
         self.transaction = transaction
 
         self.all_transactions[self.transac_type].append(self.transaction)  #⬅️ Keep reviewing to understand the logic here.
-        print(self.all_transactions)
+        print(f"\nAll your transactions so far:")
+        print(f"Income: {self.all_transactions["income"]}")
+        print(f"Expense: {self.all_transactions["expense"]}")
 
 
 
