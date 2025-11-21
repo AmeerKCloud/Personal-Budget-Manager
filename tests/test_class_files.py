@@ -75,8 +75,8 @@ while True:
         if key == transac_type:
             for list_item in current_transac_data[key]:
                 key = key
-                transaction = list_item
-                monetary_amount = list_item["amount"]
+                transaction = list_item                     #⬅️ This is the dict. inside the list.
+                monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
             budget.show_transactions(transaction, key)
 
     exit = input("Exit? 'y' or 'n'? ").lower()
