@@ -85,6 +85,8 @@ while True:
                 transaction = list_item                     #⬅️ This is the dict. inside the list.
                 monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
             budget.show_transactions(transaction, key)
+            print(budget.add_income(monetary_amount))
+            print(budget.add_expense(monetary_amount))
             print(budget.calculate_balance())
 
     exit = input("Exit? 'y' or 'n'? ").lower()
