@@ -42,19 +42,19 @@ class Budget:                           #⬅️Currently trying to figure out ho
         """Returns the sum of all income transactions."""
         income_total = 0
         income_total += money
-        print(f"Your total income: {income_total}")
+        print(f"Your total income: ${income_total}")
 
     def add_expense(self, money):
         """Returns the sum of all expense transactions."""
         expense_total = 0
         expense_total += money
-        return expense_total
+        print(f"Your total expenses: ${expense_total}")
 
     def calculate_balance(self):
         income_total = sum(item["amount"] for item in self.all_transactions["income"]) #⬅️ Extracting amount values from list of dicts & summing them.
         expense_total = sum(item["amount"] for item in self.all_transactions["expense"])
         self.total_available_money = income_total - expense_total
-        return self.total_available_money
+        print(f"Your total available balance is: ${self.total_available_money}")
 
     def show_transactions(self, transaction, transac_type):
         """Displays entire history of all transactions"""
