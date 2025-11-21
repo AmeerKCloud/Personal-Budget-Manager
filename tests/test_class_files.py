@@ -117,15 +117,7 @@ while True:
 
 
 #TODO: 
-# - Currently trying to figure how to make use of the info from the completed 'Transaction'
-# class to input it into the 'Budget' class to make use of that class as per the program 
-# requirements.
-# - - Currently working calculate_balance() method in Budget class.
-
-
-
-
-
+# - Currently trying to print different outputs based on user choice.
 
 
 
