@@ -38,16 +38,21 @@ class Budget:                           #⬅️Currently trying to figure out ho
         }
         self.total_available_money = 0
 
-    def add_income(self):
+    def add_income(self, money):
         """Returns the sum of all income transactions."""
-        pass
+        income_total = 0
+        income_total += money
+        return income_total
 
     def add_expense(self, money):
         """Returns the sum of all expense transactions."""
-        pass
+        expense_total = 0
+        expense_total += money
+        return expense_total
 
-    def calculate_balance(self, money):
-        pass
+    def calculate_balance(self):
+        balance = self.add_expense() - self.add_income()
+        return balance
 
     def show_transactions(self, transaction, transac_type):
         """Displays entire history of all transactions"""
