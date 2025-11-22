@@ -87,7 +87,6 @@ while True:
         for key in current_transac_data:
             if key == transac_type:
                 for list_item in current_transac_data[key]:
-                    key = key
                     transaction = list_item                     #⬅️ This is the dict. inside the list.
                     monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
             budget.show_transactions(transaction, key)
@@ -95,7 +94,6 @@ while True:
         for key in current_transac_data:                        #⬅️ Getting ERROR: here if user selects 'b' first.
             if key == transac_type:
                 for list_item in current_transac_data[key]:
-                    key = key
                     transaction = list_item                     
                     monetary_amount = list_item["amount"]       
             budget.show_transactions(transaction, key)
