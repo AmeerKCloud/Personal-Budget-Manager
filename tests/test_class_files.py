@@ -16,15 +16,15 @@ class Transaction:                                         #⬅️ This class is
             "expense" : [],
         }
 
-        for key in current_transac_dict:
+        for key in self.current_transac_dict:
             if self.type == key:
                 new_dict = {}
                 new_dict["type"] = self.type
                 new_dict["date"] = self.date
                 new_dict["description"] = self.description
                 new_dict["amount"] = self.amount
-                current_transac_dict[key].append(new_dict)
-        return current_transac_dict
+                self.current_transac_dict[key].append(new_dict)
+        return self.current_transac_dict
 
 
 class Budget:                           #⬅️Currently trying to figure out how to make use of this class
