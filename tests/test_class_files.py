@@ -76,6 +76,8 @@ while True:
 
     if user_choice == "a":
 
+        #⬇️ Perhaps these set of inputs need to go into option 'b' in order for the error messages to stop?
+        
         transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
         transac_date = input("Enter transaction date: ")
         transac_description = input("Briefly describe your transaction: ").capitalize()
@@ -91,6 +93,7 @@ while True:
                     monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
             budget.show_transactions(transaction, key)
     elif user_choice == "b":
+        current_transac_data = transaction.current_transac_data()
         for key in current_transac_data:                        #⬅️ Getting ERROR: here if user selects 'b' first.
             if key == transac_type:
                 for list_item in current_transac_data[key]:
