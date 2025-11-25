@@ -117,7 +117,7 @@ while True:
 
 
 
-#TODO: 
+#TODO: Describe the problem:
 # - Currently trying to print different outputs based on user choice.
 
 
