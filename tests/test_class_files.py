@@ -79,7 +79,7 @@ budget = Budget()   #⬅️ Object
 while True:
     print("\n" * 20)
     print("\n----- Budget Tracker -----")
-    user_choice = input("Choose an option: (a) Add new transaction, (b) view all transactions, (c) view income total, (d) view expense total, (e) view balance, (f) exit: ").lower()
+    user_choice = input("Choose an option: \n(a) Add new transaction, \n(b) view all transactions, \n(c) view income total, \n(d) view expense total, \n(e) view balance, \n(f) exit:\n ").lower()
 
     if user_choice == "a":
 
