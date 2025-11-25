@@ -77,8 +77,9 @@ class Budget:                           #⬅️Currently trying to figure out ho
 budget = Budget()   #⬅️ Object
 
 while True:
-
-    user_choice = input("\nChoose an option: (a) Add new transaction, (b) view all transactions, (c) view income total, (d) view expense total, (e) view balance, (f) exit: ").lower()
+    print("\n" * 20)
+    print("\n----- Budget Tracker -----")
+    user_choice = input("Choose an option: (a) Add new transaction, (b) view all transactions, (c) view income total, (d) view expense total, (e) view balance, (f) exit: ").lower()
 
     if user_choice == "a":
 
