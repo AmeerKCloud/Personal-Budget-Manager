@@ -94,7 +94,6 @@ while True:
                 budget.show_transactions(transaction, key)
     elif user_choice == "b":    
             budget.show_transactions(transaction, key)
-        # budget.show_transactions(transaction, key)
     elif user_choice == "c":
         budget.add_income(monetary_amount)
     elif user_choice == "d":
