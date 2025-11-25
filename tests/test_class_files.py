@@ -38,6 +38,13 @@ class Budget:                           #⬅️Currently trying to figure out ho
         }
         self.total_available_money = 0
 
+    def add_transactions(self, transaction, transac_type):
+        """Displays entire history of all transactions"""
+        self.transac_type = transac_type
+        self.transaction = transaction
+
+        self.all_transactions[self.transac_type].append(self.transaction) 
+
     def add_income(self, money):
         """Returns the sum of all income transactions."""
         income_total = 0
@@ -91,7 +98,7 @@ while True:
                 for list_item in current_transac_data[key]:
                     transaction = list_item                     #⬅️ This is the dict. inside the list.
                     monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
-                budget.show_transactions(transaction, key)
+                budget.add_transactions(transaction, key)
     elif user_choice == "b":    
         budget.show_transactions(transaction, key)
     elif user_choice == "c":
