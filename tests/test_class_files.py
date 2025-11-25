@@ -82,8 +82,6 @@ while True:
     user_choice = input("Choose an option: \n(a) Add new transaction, \n(b) view all transactions, \n(c) view income total, \n(d) view expense total, \n(e) view balance, \n(f) exit:\n ").lower()
 
     if user_choice == "a":
-
-        #⬇️ Perhaps these set of inputs need to go into option 'b' in order for the error messages to stop?
         
         transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
         transac_date = input("Enter transaction date: ")
