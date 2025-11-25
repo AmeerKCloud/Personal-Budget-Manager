@@ -91,7 +91,7 @@ while True:
                 for list_item in current_transac_data[key]:
                     transaction = list_item                     #⬅️ This is the dict. inside the list.
                     monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
-            budget.show_transactions(transaction, key)
+                budget.show_transactions(transaction, key)
     elif user_choice == "b":
         current_transac_data = transaction.current_transac_data()
         for key in current_transac_data:                        #⬅️ Getting ERROR: here if user selects 'b' first.
