@@ -63,17 +63,16 @@ class Budget:                           #⬅️Currently trying to figure out ho
         self.total_available_money = income_total - expense_total
         print(f"Your total available balance is: ${self.total_available_money}")
 
-    def show_transactions(self, transaction, transac_type):
+    def show_transactions(self):
         """Displays entire history of all transactions"""
-        self.transac_type = transac_type
-        self.transaction = transaction
 
-        self.all_transactions[self.transac_type].append(self.transaction)  #⬅️ Keep reviewing to understand the logic here.
-        print(f"\nAll your transactions so far:")
-        print(f"Income: {self.all_transactions['income']}")
-        print(f"Expense: {self.all_transactions['expense']}")
-
-
+        if self.all_transactions["income"] == [] and self.all_transactions["expense"] == []:
+            print("\nNo transactions recorded yet.")
+            return
+        else:
+            print(f"\nAll your transactions so far:")
+            print(f"Income: {self.all_transactions['income']}")
+            print(f"Expense: {self.all_transactions['expense']}")
 
 budget = Budget()   #⬅️ Object
 
