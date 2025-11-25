@@ -118,7 +118,8 @@ while True:
 
 
 #TODO: Describe the problem:
-# - Currently trying to print different outputs based on user choice.
+# Currently trying to print different outputs based on user choice.
+# - When the user selects option 'b' the dictionary of all transactions should print.
 
 
 
