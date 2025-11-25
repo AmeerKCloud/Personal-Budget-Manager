@@ -71,8 +71,16 @@ class Budget:                           #⬅️Currently trying to figure out ho
             return
         else:
             print(f"\nAll your transactions so far:")
-            print(f"Income: {self.all_transactions['income']}")
-            print(f"Expense: {self.all_transactions['expense']}")
+            print("\n>>> 💲 Income Transactions:")
+            for list_item in self.all_transactions["income"]:
+                print("\n---")
+                for key, value in list_item.items():
+                    print(f"{key.capitalize()}: {value}")
+            print("\n>>> 💸 Expense Transactions:")
+            for list_item in self.all_transactions["expense"]:
+                print("\n---")
+                for key, value in list_item.items():
+                    print(f"{key.capitalize()}: {value}")
 
 budget = Budget()   #⬅️ Object
 
