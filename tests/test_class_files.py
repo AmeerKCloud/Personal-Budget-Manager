@@ -51,10 +51,10 @@ class Budget:                           #⬅️Currently trying to figure out ho
         income_total += self.all_transactions["income"]["amount"]
         print(f"Your total income: ${income_total}")
 
-    def add_expense(self, money):
+    def add_expense(self):
         """Returns the sum of all expense transactions."""
         expense_total = 0
-        expense_total += money
+        expense_total += self.all_transactions["expense"]["amount"]
         print(f"Your total expenses: ${expense_total}")
 
     def calculate_balance(self):
