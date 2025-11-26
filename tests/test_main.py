@@ -26,9 +26,9 @@ while True:
     elif user_choice == "b":    
         budget.show_transactions()
     elif user_choice == "c":
-        budget.add_income(monetary_amount)
+        budget.add_income()
     elif user_choice == "d":
-        budget.add_expense(monetary_amount)
+        budget.add_expense()
     elif user_choice == "e":
         budget.calculate_balance()
     else:
