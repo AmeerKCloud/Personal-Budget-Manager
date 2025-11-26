@@ -21,7 +21,7 @@ while True:
             if key == transac_type:
                 for list_item in current_transac_data[key]:
                     transaction = list_item                     #⬅️ This is the dict. inside the list.
-                    monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
+                    # monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
                 budget.add_transactions(transaction, key)
     elif user_choice == "b":    
         budget.show_transactions()
