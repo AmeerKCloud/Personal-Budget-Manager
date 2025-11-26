@@ -54,7 +54,6 @@ class Budget:                           #⬅️Currently trying to figure out ho
 
     def add_expense(self):
         """Returns the sum of all expense transactions."""
-        # expense_total = 0
         expense_total = sum(item.get("amount", 0) for item in self.all_transactions["expense"]) #⬅️ Copilots way (more efficient)
         print(f"Your total expenses: ${expense_total}")
 
