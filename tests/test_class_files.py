@@ -397,3 +397,102 @@ while True:
 #     if exit == "y":
 #         break
 
+
+
+#______ Reserve 6 _______:
+
+# class Budget:                           #⬅️Currently trying to figure out how to make use of this class
+#     """Stores total available money.
+#     Stores all transactions in a list."""
+
+#     def __init__(self):
+#         self.all_transactions = {
+#             "income": [],
+#             "expense": [],
+#         }
+#         self.total_available_money = 0
+
+#     def add_transactions(self, transaction, transac_type):
+#         """Displays entire history of all transactions"""
+#         self.transac_type = transac_type
+#         self.transaction = transaction
+
+#         self.all_transactions[self.transac_type].append(self.transaction) 
+
+#     def add_income(self, money):
+#         """Returns the sum of all income transactions."""
+#         income_total = 0
+#         income_total += money
+#         print(f"Your total income: ${income_total}")
+
+#     def add_expense(self, money):
+#         """Returns the sum of all expense transactions."""
+#         expense_total = 0
+#         expense_total += money
+#         print(f"Your total expenses: ${expense_total}")
+
+#     def calculate_balance(self):
+#         income_total = sum(item["amount"] for item in self.all_transactions["income"]) #⬅️ Extracting amount values from list of dicts & summing them.
+#         expense_total = sum(item["amount"] for item in self.all_transactions["expense"])
+#         self.total_available_money = income_total - expense_total
+#         print(f"Your total available balance is: ${self.total_available_money}")
+
+#     def show_transactions(self):
+#         """Displays entire history of all transactions"""
+
+#         if self.all_transactions["income"] == [] and self.all_transactions["expense"] == []:
+#             print("\nNo transactions recorded yet.")
+#             return
+#         else:
+#             print(f"\nAll your transactions so far:")
+#             print("\n>>> 💲 Income Transactions:")
+#             for list_item in self.all_transactions["income"]:
+#                 print("\n---")
+#                 for key, value in list_item.items():
+#                     print(f"{key.capitalize()}: {value}")
+#             print("\n>>> 💸 Expense Transactions:")
+#             for list_item in self.all_transactions["expense"]:
+#                 print("\n---")
+#                 for key, value in list_item.items():
+#                     print(f"{key.capitalize()}: {value}")
+
+# budget = Budget()   #⬅️ Object
+
+# while True:
+#     print("\n" * 20)
+#     print("\n----- Budget Tracker -----")
+#     user_choice = input("Choose an option: \n(a) Add new transaction, \n(b) view all transactions, \n(c) view income total, \n(d) view expense total, \n(e) view balance, \n(f) exit:\n ").lower()
+
+#     if user_choice == "a":
+        
+#         transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
+#         transac_date = input("Enter transaction date: ")
+#         transac_description = input("Briefly describe your transaction: ").capitalize()
+#         transac_amount = float(input("Enter transaction amount: $"))
+
+#         transaction = Transaction(transac_type, transac_date, transac_description, transac_amount)    #⬅️ Object
+#         current_transac_data = transaction.current_transac_data()
+
+#         for key in current_transac_data:
+#             if key == transac_type:
+#                 for list_item in current_transac_data[key]:
+#                     transaction = list_item                     #⬅️ This is the dict. inside the list.
+#                     monetary_amount = list_item["amount"]       #⬅️ This is the amount value inside the dict.
+#                 budget.add_transactions(transaction, key)
+#     elif user_choice == "b":    
+#         budget.show_transactions()
+#     elif user_choice == "c":
+#         budget.add_income(monetary_amount)
+#     elif user_choice == "d":
+#         budget.add_expense(monetary_amount)
+#     elif user_choice == "e":
+#         budget.calculate_balance()
+#     else:
+#         break
+
+#     exit = input("Exit? 'y' or 'n'? ").lower()
+
+#     if exit == "y":
+#         break
+
+
