@@ -47,10 +47,10 @@ class Budget:                           #⬅️Currently trying to figure out ho
 
     def add_income(self):
         """Returns the sum of all income transactions."""
-        income_total = 0
-        for item in self.all_transactions["income"]:                                            #⬅️ My way (less efficient)
+        income_total = 0                                                                        #⬅️ My way (less efficient), bgins here
+        for item in self.all_transactions["income"]:
             income_total += item["amount"]
-        print(f"Your total income: ${income_total}")
+        print(f"Your total income: ${income_total}")                                            #⬅️ Nds here
 
     def add_expense(self):
         """Returns the sum of all expense transactions."""
