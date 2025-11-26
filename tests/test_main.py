@@ -33,8 +33,3 @@ while True:
         budget.calculate_balance()
     else:
         break
-
-    exit = input("Exit? 'y' or 'n'? ").lower()
-
-    if exit == "y":
-        break
