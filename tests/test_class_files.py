@@ -45,10 +45,10 @@ class Budget:                           #⬅️Currently trying to figure out ho
 
         self.all_transactions[self.transac_type].append(self.transaction) 
 
-    def add_income(self, money):
+    def add_income(self):
         """Returns the sum of all income transactions."""
         income_total = 0
-        income_total += money
+        income_total += self.all_transactions["income"]["amount"]
         print(f"Your total income: ${income_total}")
 
     def add_expense(self, money):
