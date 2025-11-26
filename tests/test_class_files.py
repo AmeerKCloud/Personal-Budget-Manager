@@ -85,8 +85,8 @@ class Budget:                           #⬅️Currently trying to figure out ho
 
 
 #TODO: Describe the problem:
-# Currently trying to print different outputs based on user choice.
-# - When the user selects option 'b' the dictionary of all transactions should print.
+# When the user chooses option '(d) View expense total' program prints the same amount as income
+# - Even though the user never entered an expense and so expense should be empty
 
 
 
