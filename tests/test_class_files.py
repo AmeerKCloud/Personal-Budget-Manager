@@ -87,6 +87,7 @@ class Budget:                           #⬅️Currently trying to figure out ho
 #TODO: Describe the problem:
 # When the user chooses option '(d) View expense total' program prints the same amount as income
 # - Even though the user never entered an expense and so expense should be empty
+# - - To fix this, the 'add_expense/income' methods in 'Budget' class must be modified.
 
 
 
