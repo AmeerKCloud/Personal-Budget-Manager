@@ -34,7 +34,10 @@ while True:
         budget.add_expense()
     elif user_choice == "e":
         budget.calculate_balance()
+    elif user_choice == "f":
+        break
     else:
+        print("Invalid option. Try again.")
         break
 
 #TODO: Describe the CURRENT problem you're working on:
