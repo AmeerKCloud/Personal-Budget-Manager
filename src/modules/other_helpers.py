@@ -12,3 +12,5 @@ class UserInputs:
         self.transac_date = input("Enter transaction date: ")
         self.transac_description = input("Briefly describe your transaction: ").capitalize()
         self.transac_amount = float(input("Enter transaction amount: $"))
+
+    
