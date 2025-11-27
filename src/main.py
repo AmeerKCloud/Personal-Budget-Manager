@@ -6,7 +6,6 @@ from modules.class_files import Transaction, Budget
 budget = Budget()   #⬅️ Object
 
 while True:
-    print("\n")
     print("\n----- Budget Tracker -----")
     print("|")
     user_choice = input("Choose an option: \n(a) Add new transaction, \n(b) view all transactions, \n(c) view income total, \n(d) view expense total, \n(e) view balance, \n(f) exit:\n ").lower()
