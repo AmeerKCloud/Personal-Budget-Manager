@@ -33,3 +33,15 @@ while True:
         budget.calculate_balance()
     else:
         break
+
+#TODO: Describe the CURRENT problem you're working on:
+
+
+#TODO: What objectives are left to complete?
+# Handle errors
+# - Invalid amounts
+# - Negative numbers
+# - Wrong input types
+# Transfer finalized code from test files to main folders/files
+
+
