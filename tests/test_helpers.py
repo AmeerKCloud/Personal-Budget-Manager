@@ -11,4 +11,6 @@ class UserInputs:
             self.transac_amount = float(input("Enter transaction amount: $"))
         except ValueError:
             print("Invalid input. Please enter the correct data types.")
+        except AttributeError:
+            print("Attribute error encountered. Please check your inputs.")
             # Further exception handling can be implemented here.
