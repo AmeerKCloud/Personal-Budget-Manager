@@ -44,7 +44,8 @@ while True:
 
 
 #TODO: What objectives are left to complete?
-# Handle errors:                                 ❌ Still needs to be done.
+# Handle errors:                                 ❌ Still needs to be done., currently working on it.
+# - Invalid transaction types
 # - Invalid amounts
 # - Negative numbers
 # - Wrong input types
