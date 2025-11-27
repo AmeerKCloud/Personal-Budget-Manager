@@ -47,10 +47,10 @@ while True:
 # - Wrong input types
 # Transfer finalized code from test files to main folders/files
 
-# Optional TODO:
+# Optional TODO: COMPLETED ✅
 # Further modularize the code more than you already have by:
 # - Making separate class for user inputs
-# - - Perhaps this will also include the error/exception-handling functionalities?
+# - - Perhaps this will also include the error/exception-handling functionalities? ❌ Still needs to be done.
 
 
 
