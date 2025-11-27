@@ -2,6 +2,7 @@
 
 class UserInputs:
     """Handles all user inputs for transactions."""
+    """Does not handle exceptions yet."""   #⬅️ Still needs to be done.
     def __init__(self):
         self.transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
         self.transac_date = input("Enter transaction date: ")
