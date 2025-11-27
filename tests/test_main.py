@@ -1,3 +1,5 @@
+# This is the main test file for the budget tracker program.
+
 from test_class_files import Transaction, Budget
 
 budget = Budget()   #⬅️ Object
