@@ -1,4 +1,4 @@
-# Here go all of the test-class code.
+# Here go all of the prototype class code.
 
 class Transaction:                                         #⬅️ This class is working as desired.
     def __init__(self, type, date, description, amount):
