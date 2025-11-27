@@ -11,10 +11,8 @@ while True:
     print("|")
     user_choice = input("Choose an option: \n(a) Add new transaction, \n(b) view all transactions, \n(c) view income total, \n(d) view expense total, \n(e) view balance, \n(f) exit:\n ").lower()
 
-    user_input = UserInputs()
-
     if user_choice == "a":
-
+        user_input = UserInputs()   #⬅️ Object to gather user inputs for transaction details.
         transaction = Transaction(user_input.transac_type, user_input.transac_date, user_input.transac_description, user_input.transac_amount)    #⬅️ Object
         current_transac_data = transaction.current_transac_data()
 
