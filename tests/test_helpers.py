@@ -12,5 +12,5 @@ class UserInputs:
         except ValueError:
             print("Invalid input. Please enter the correct data types.")
         except AttributeError:
-            print("Attribute error encountered. Please check your inputs.")
+            print("Attribute error encountered. Please check your inputs.")  #⬅️ Not printing
             # Further exception handling can be implemented here.
