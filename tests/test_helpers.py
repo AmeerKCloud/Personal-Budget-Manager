@@ -11,3 +11,6 @@ class UserInputs:
         self.transac_amount = float(input("Enter transaction amount: $"))
     
 
+user_input = UserInputs()
+
+transaction = Transaction(user_input.transac_type, user_input.transac_date, user_input.transac_description, user_input.transac_amount)
