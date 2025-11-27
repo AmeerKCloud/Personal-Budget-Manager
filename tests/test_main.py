@@ -1,4 +1,10 @@
 # This is the main test file for the budget tracker program.
+# Purpose of the 'test_helpers.py' file:
+# This module contains helper classes and functions that assist
+# with user input handling for the budget program.
+# These helpers can be imported and utilized in the main program
+# to streamline user interactions and data collection & to improve code organization
+# as well as further modularity.
 
 from test_helpers import UserInputs
 from test_class_files import Transaction, Budget
