@@ -1,6 +1,6 @@
 # This is the main file for the program.
 
-from test_class_files import Transaction, Budget
+from modules.class_files import Transaction, Budget
 
 budget = Budget()   #⬅️ Object
 
