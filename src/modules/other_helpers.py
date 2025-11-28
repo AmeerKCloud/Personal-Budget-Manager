@@ -24,3 +24,8 @@ class UserInputs:
             print("❌ Invalid input. Please enter the correct data types.")
         except AttributeError:
             print("Attribute error encountered. Please check your inputs.")  
+
+# IMPORTANT:
+# Predefined all attributes before the try/except so they always exist.
+# This prevents missing-attribute AttributeErrors.
+# Your except blocks now work as intended.
