@@ -8,7 +8,7 @@ class UserInputs:
         self.transac_type = None          #⬅️ Predefine all attributes so they always exist.
         self.transac_date = None
         self.transac_description = None
-        self.transac_amount = None
+        self.transac_amount = None        #⬅️ Still gets added as 'None' if invalid input is given.
 
         try:
             self.transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
