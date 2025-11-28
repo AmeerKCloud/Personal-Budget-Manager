@@ -5,7 +5,7 @@ class UserInputs:
     """Does not handle exceptions yet."""
     def __init__(self):
 
-        self.transac_type = None       #⬅️ Predefine all attributes so they always exist.
+        self.transac_type = None          #⬅️ Predefine all attributes so they always exist.
         self.transac_date = None
         self.transac_description = None
         self.transac_amount = None
