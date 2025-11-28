@@ -44,17 +44,22 @@ while True:
 
 
 #TODO: What objectives are left to complete?
-# Handle errors:                                 ❌ Still needs to be done., currently working on it.
+# Handle errors:                                 ⚠️ currently working on it.
 # - Invalid transaction types
 # - Invalid amounts
 # - Negative numbers
 # - Wrong input types
+# - Empty inputs
+# - - NOTE: Some of these are partially handled in the UserInputs class.
+# - - - But need to refine and improve the exception handling further.
+# - - - Currently, transactions with 'None' values can still be created if invalid inputs are given.
+# - - - Need to prevent that from happening.
 # Transfer finalized code from test files to main folders/files
 
 # Optional TODO: COMPLETED ✅
 # Further modularize the code more than you already have by:
 # - Making separate class for user inputs
-# - - Perhaps this will also include the error/exception-handling functionalities? ❌ Still needs to be done.
+# - - Perhaps this will also include the error/exception-handling functionalities? ⚠️ Working on it.
 
 
 
