@@ -21,6 +21,10 @@ while True:
         transaction = Transaction(user_input.transac_type, user_input.transac_date, user_input.transac_description, user_input.transac_amount)    #⬅️ Object
         current_transac_data = transaction.current_transac_data()
 
+        if transaction.amount is None:
+            print("Transaction amount cannot be None.")
+            break
+
         for key in current_transac_data:
             if key == user_input.transac_type:
                 for list_item in current_transac_data[key]:
