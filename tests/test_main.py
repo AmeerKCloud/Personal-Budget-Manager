@@ -22,7 +22,6 @@ while True:
         current_transac_data = transaction.current_transac_data()
 
         if transaction.amount is None:
-            print("Transaction amount cannot be None.")
             break
 
         for key in current_transac_data:

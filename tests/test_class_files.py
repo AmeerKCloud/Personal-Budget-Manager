@@ -11,10 +11,6 @@ class Transaction:                                         #⬅️ This class is
         """Stores type (“income” or “expense”), 
         description, and amount."""
 
-        # if self.amount is None:
-        #     print("Transaction amount cannot be None.")
-        #     return 
-
         self.current_transac_dict = {
             "income" : [],
             "expense" : [],
