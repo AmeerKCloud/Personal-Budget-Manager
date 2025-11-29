@@ -41,6 +41,8 @@ while True:
         break
 
 #TODO: Describe the CURRENT problem you're working on:
+# - Transactions with 'None' values can still be created if invalid inputs are given.
+# - Need to prevent that from happening.
 
 
 #TODO: What objectives are left to complete?
