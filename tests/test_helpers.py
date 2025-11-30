@@ -14,6 +14,9 @@ class UserInputs:
         while True:
             try:
                 self.transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
+                if self.transac_type not in ['income', 'expense']:
+                    raise ValueError("Transaction type must be 'income' or 'expense'.")
+                    continue  #⬅️ Prompt again if invalid type
                 self.transac_date = input("Enter transaction date: ")
                 self.transac_description = input("Briefly describe your transaction: ").capitalize()
                 amount = input("Enter transaction amount: $")
