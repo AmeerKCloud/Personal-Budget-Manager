@@ -32,3 +32,8 @@ class UserInputs:
 # Predefined all attributes before the try/except so they always exist.
 # This prevents missing-attribute AttributeErrors.
 # Your except blocks now work as intended.
+
+# TODO: Current progress:
+# If 'income' or 'expense' is not entered, ValueError is NOT raised yet for some reason, 'continue' unreachable.
+# - Only 'ValueError' in 'except' block is being raised.
+# - Need to refine that part further, look into it further.
