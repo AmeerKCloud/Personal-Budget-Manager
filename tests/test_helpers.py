@@ -18,7 +18,7 @@ class UserInputs:
             if self.transac_type in ['income', 'expense']:
                 return self.transac_type
             else:
-                print("Please only enter 'income' or 'expense'")
+                print("❌ Invalid entry. Please only enter 'income' or 'expense'")
 
         # while True:
         #     try:
