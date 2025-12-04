@@ -14,7 +14,6 @@ class UserInputs:
     def transac_input(self):
         while True:
             self.transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
-
             if self.transac_type in ['income', 'expense']:
                 return self.transac_type
             else:
@@ -26,11 +25,16 @@ class UserInputs:
             if self.transac_date.strip() != "":
                 return self.transac_date
             else:
-                print("❌ Date cannot be empty.")
+                print("⚠️ Date cannot be empty.")
 
     def description_input(self):
         while True:
             self.transac_description = input("Briefly describe your transaction: ").capitalize()
+            if self.transac_description != "":
+                return self.transac_description
+            else:
+                print("⚠️ Description cannot be empty.")
+
 
         # while True:
         #     try:
