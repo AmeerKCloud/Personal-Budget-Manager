@@ -16,6 +16,8 @@ class UserInputs:
             self.transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
             if self.transac_type in ['income', 'expense']:
                 return self.transac_type
+            elif self.transac_type == "":
+                print("⚠️ Type cannot be empty.")
             else:
                 print("❌ Invalid entry. Please only enter 'income' or 'expense'")
 
@@ -34,6 +36,12 @@ class UserInputs:
                 return self.transac_description
             else:
                 print("⚠️ Description cannot be empty.")
+
+    def amount_input(self):
+        while True:
+            self.transac_amount = float(input("Enter transaction amount: $"))
+            if self.transac_amount != None:
+                return self.transac_amount
 
 
         # while True:
