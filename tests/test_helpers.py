@@ -11,7 +11,7 @@ class UserInputs:
         self.transac_description = None
         self.transac_amount = None        #⬅️ Still gets added as 'None' if invalid input is given.
 
-    def transac(self):
+    def transac_input(self):
         while True:
             self.transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
 
@@ -19,6 +19,18 @@ class UserInputs:
                 return self.transac_type
             else:
                 print("❌ Invalid entry. Please only enter 'income' or 'expense'")
+
+    def date_input(self):
+        while True:
+            self.transac_date = input("Enter transaction date (e.g. 11/17/2025): ")
+            if self.transac_date.strip() != "":
+                return self.transac_date
+            else:
+                print("❌ Date cannot be empty.")
+
+    def description_input(self):
+        while True:
+            self.transac_description = input("Briefly describe your transaction: ").capitalize()
 
         # while True:
         #     try:
