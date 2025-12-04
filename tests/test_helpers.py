@@ -11,20 +11,29 @@ class UserInputs:
         self.transac_description = None
         self.transac_amount = None        #⬅️ Still gets added as 'None' if invalid input is given.
 
+    def transac(self):
         while True:
-            try:
-                self.transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
-                if self.transac_type not in ['income', 'expense']:
-                    print("Please only enter 'income' or 'expense'")
-                self.transac_date = input("Enter transaction date: ")
-                self.transac_description = input("Briefly describe your transaction: ").capitalize()
-                amount = input("Enter transaction amount: $")
-                self.transac_amount = float(amount)
-                break                                               #⬅️ Exit loop if all inputs are valid
-            except ValueError:
-                print("❌ Invalid input. Please enter the correct data types. Transaction not created.")
-            except AttributeError:
-                print("Attribute error encountered. Please check your inputs.")  
+            self.transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
+
+            if self.transac_type in ['income', 'expense']:
+                return self.transac_type
+            else:
+                print("Please only enter 'income' or 'expense'")
+
+        # while True:
+        #     try:
+        #         self.transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
+        #         if self.transac_type not in ['income', 'expense']:
+        #             print("Please only enter 'income' or 'expense'")
+        #         self.transac_date = input("Enter transaction date: ")
+        #         self.transac_description = input("Briefly describe your transaction: ").capitalize()
+        #         amount = input("Enter transaction amount: $")
+        #         self.transac_amount = float(amount)
+        #         break                                               #⬅️ Exit loop if all inputs are valid
+        #     except ValueError:
+        #         print("❌ Invalid input. Please enter the correct data types. Transaction not created.")
+        #     except AttributeError:
+        #         print("Attribute error encountered. Please check your inputs.")  
 
 
 # IMPORTANT:
