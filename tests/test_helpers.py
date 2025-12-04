@@ -17,7 +17,7 @@ class UserInputs:
             if self.transac_type in ['income', 'expense']:
                 return self.transac_type
             elif self.transac_type == "":
-                print("⚠️ Type cannot be empty.")
+                print("⚠️ - Type cannot be empty.")
             else:
                 print("❌ Invalid entry. Please only enter 'income' or 'expense'")
 
@@ -27,7 +27,7 @@ class UserInputs:
             if self.transac_date.strip() != "":
                 return self.transac_date
             else:
-                print("⚠️ Date cannot be empty.")
+                print("⚠️ - Date cannot be empty.")
 
     def description_input(self):
         while True:
@@ -35,7 +35,7 @@ class UserInputs:
             if self.transac_description != "":
                 return self.transac_description
             else:
-                print("⚠️ Description cannot be empty.")
+                print("⚠️ - Description cannot be empty.")
 
     def amount_input(self):
         while True:
