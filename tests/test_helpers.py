@@ -43,12 +43,10 @@ class UserInputs:
                 self.transac_amount = float(input("Enter transaction amount: $"))
                 if self.transac_amount < 0:
                     print("⚠️ - Only enter a positive amount.")
-                elif self.transac_amount != 0:
+                elif self.transac_amount != None:
                     return self.transac_amount
-                else:
-                    print("⚠️ - Amount cannot be empty.")
             except ValueError:
-                print("❌ ValueError raised. Please enter the correct data types. Transaction not created.")
+                print("❌ ValueError raised. Please enter the correct data types. Transaction not created.") 
 
 
 # print(UserInputs().transac_amount)
