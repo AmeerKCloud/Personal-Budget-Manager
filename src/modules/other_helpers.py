@@ -46,12 +46,12 @@ class UserInputs:
         while True:
             try:
                 self.transac_amount = float(input("Enter transaction amount: $"))
-                if self.transac_amount < 0:
-                    print("⚠️ - Only enter a positive amount.")
+                if self.transac_amount <= 0:
+                    print("⚠️ - Only enter a positive amount greater than 0.")
                 elif self.transac_amount != None:
                     return self.transac_amount
             except ValueError:
-                print("❌ ValueError raised. Please enter the correct data types. Transaction not created.")  
+                print("❌ ValueError raised. Please enter the correct data types. Transaction not created.") 
 
 # IMPORTANT:
 # Predefined all attributes before the try/except so they always exist.
