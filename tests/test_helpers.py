@@ -46,7 +46,7 @@ class UserInputs:
                 else:
                     print("⚠️ - Amount cannot be empty.")
             except ValueError:
-                print("❌ Invalid input. Please enter the correct data types. Transaction not created.")
+                print("❌ ValueError raised. Please enter the correct data types. Transaction not created.")
 
 
         # while True:
