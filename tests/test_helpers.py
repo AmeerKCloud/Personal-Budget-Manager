@@ -49,6 +49,10 @@ class UserInputs:
                 print("❌ ValueError raised. Please enter the correct data types. Transaction not created.")
 
 
+# print(UserInputs().transac_amount)
+
+# _______ Reserve Code ________
+
         # while True:
         #     try:
         #         self.transac_type = input("\nEnter transaction type: 'income' or 'expense'? ").lower()
