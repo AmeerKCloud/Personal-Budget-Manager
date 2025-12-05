@@ -39,9 +39,12 @@ class UserInputs:
 
     def amount_input(self):
         while True:
-            self.transac_amount = float(input("Enter transaction amount: $"))
-            if self.transac_amount != None:
-                return self.transac_amount
+            try:
+                self.transac_amount = float(input("Enter transaction amount: $"))
+                if self.transac_amount != None:
+                    return self.transac_amount
+            except ValueError:
+                print("❌ Invalid input. Please enter the correct data types. Transaction not created.")
 
 
         # while True:
