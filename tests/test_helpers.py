@@ -9,7 +9,7 @@ class UserInputs:
         self.transac_type = None
         self.transac_date = None
         self.transac_description = None
-        self.transac_amount = None        #⬅️ Still gets added as 'None' if invalid input is given.
+        self.transac_amount = 0        #⬅️ Still gets added as 'None' if invalid input is given.
 
     def transac_input(self):
         while True:
@@ -41,7 +41,9 @@ class UserInputs:
         while True:
             try:
                 self.transac_amount = float(input("Enter transaction amount: $"))
-                if self.transac_amount != None:
+                if self.transac_amount < 0:
+                    print("⚠️ - Only enter a positive amount.")
+                elif self.transac_amount != 0:
                     return self.transac_amount
                 else:
                     print("⚠️ - Amount cannot be empty.")
