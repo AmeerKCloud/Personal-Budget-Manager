@@ -1,4 +1,5 @@
 # This is the main file for the program.
+# PROJECT COMPLETED (met all requirements listed within the google docs)
 
 from modules.other_helpers import UserInputs
 from modules.class_files import Transaction, Budget
